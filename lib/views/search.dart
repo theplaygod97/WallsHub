@@ -19,6 +19,7 @@ class _SearchState extends State<Search> {
   TextEditingController searchController = new TextEditingController();
 
   getSearchWalls(String query) async{
+    //wallpapers.clear();
     var response = await http.get("https://api.pexels.com/v1/search?query=$query&per_page=32&page=1",
         headers:{
           "Authorization" : apiKey});
@@ -75,6 +76,7 @@ class _SearchState extends State<Search> {
                   ),
                   GestureDetector(
                     onTap: (){
+                      wallpapers.clear();
                       getSearchWalls(searchController.text);},
                     child: Container(
                         child: Icon(Icons.search)),
