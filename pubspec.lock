@@ -92,6 +92,48 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.1.0"
+  firebase:
+    dependency: transitive
+    description:
+      name: firebase
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "7.3.0"
+  firebase_core:
+    dependency: "direct main"
+    description:
+      name: firebase_core
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.4+3"
+  firebase_core_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_core_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
+  firebase_core_web:
+    dependency: transitive
+    description:
+      name: firebase_core_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.1+2"
+  firebase_database:
+    dependency: "direct main"
+    description:
+      name: firebase_database
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.5"
+  firebase_storage:
+    dependency: "direct main"
+    description:
+      name: firebase_storage
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.5"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -116,6 +158,18 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  fluttertoast:
+    dependency: "direct main"
+    description:
+      name: fluttertoast
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.1"
   http:
     dependency: "direct main"
     description:
@@ -151,6 +205,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.16.1"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.1+1"
   matcher:
     dependency: transitive
     description:

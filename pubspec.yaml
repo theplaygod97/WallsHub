@@ -34,6 +34,10 @@ dependencies:
   cached_network_image: ^2.2.0+1
   dio: ^3.0.9
   flutter_launcher_icons: ^0.7.2
+  firebase_storage: ^3.1.5
+  firebase_core: ^0.4.4+3
+  firebase_database: ^3.1.5
+  fluttertoast: ^4.0.1
 
 
 dev_dependencies:
