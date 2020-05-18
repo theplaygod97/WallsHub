@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "385444122981",
+    "firebase_url": "https://wallshub-b7c30.firebaseio.com",
+    "project_id": "wallshub-b7c30",
+    "storage_bucket": "wallshub-b7c30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385444122981:android:8f3c4a7bf9ef6967cd918c",
+        "android_client_info": {
+          "package_name": "com.example.walls"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385444122981-2nh372nli4if84f2ub6tcvld6oum9qls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_NLqn1yaf1eoKBKiUrGvmA1mMWPA0iyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385444122981-2nh372nli4if84f2ub6tcvld6oum9qls.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

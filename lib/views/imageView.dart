@@ -5,6 +5,7 @@ import 'dart:typed_data';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 
@@ -37,6 +38,14 @@ class _ImageViewState extends State<ImageView> {
           GestureDetector(
             onTap: (){
               _save();
+              Fluttertoast.showToast(
+                  msg: 'Saving Image in Gallery',
+                  toastLength: Toast.LENGTH_SHORT,
+                  gravity: ToastGravity.CENTER,
+                  timeInSecForIosWeb: 1,
+                  backgroundColor: Colors.black54,
+                  textColor: Colors.white
+              );
             },
             child: Stack(
               children: <Widget>[
@@ -51,6 +60,7 @@ class _ImageViewState extends State<ImageView> {
                   ),
                 ),
                 Container(
+                  height: 50,
                   width: MediaQuery.of(context).size.width/2,
                   padding: EdgeInsets.symmetric(horizontal: 8,vertical: 8),
                   decoration: BoxDecoration(
@@ -65,7 +75,7 @@ class _ImageViewState extends State<ImageView> {
                   ),
 
                   child: Column(children: <Widget>[
-                    Text("Set Wall",style: TextStyle(
+                    Text("Save Wall",style: TextStyle(
                         fontSize: 16,color:  Colors.white70
                     ),),
                     Text("Image will be saved in Gallery",style: TextStyle(

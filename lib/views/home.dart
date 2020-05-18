@@ -5,6 +5,7 @@ import 'package:walls/data/data.dart';
 import 'package:walls/model/CategoriesModel.dart';
 import 'package:walls/model/WallpaperModel.dart';
 import 'package:walls/views/category.dart';
+import 'package:walls/views/fimages.dart';
 import 'package:walls/views/search.dart';
 import 'package:walls/widget/widget.dart';
 import 'package:walls/views/imageView.dart';
@@ -123,11 +124,19 @@ class CategoryTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(
-          builder: (context) => Categorize(
-            categoryName: title.toLowerCase(),
-          )
-        ));
+        if(title == "Dev's ❤"){Navigator.push(context, MaterialPageRoute(
+            builder: (context) =>
+                Firebaseimgs()
+                ));
+        }
+        else {
+          Navigator.push(context, MaterialPageRoute(
+              builder: (context) =>
+                  Categorize(
+                    categoryName: title.toLowerCase(),
+                  )
+          ));
+        }
       },
       child: Container(
         margin: EdgeInsets.only(right: 4),

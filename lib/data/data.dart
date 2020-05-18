@@ -4,6 +4,12 @@ List<CategoriesModel> getCategories(){
 
   List<CategoriesModel> categories = new List();
   CategoriesModel categoriesModel = new CategoriesModel();
+//
+  categoriesModel.imgURL =
+  "https://images.pexels.com/photos/744667/pexels-photo-744667.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
+  categoriesModel.categoriesName = "Dev's ❤";
+  categories.add(categoriesModel);
+  categoriesModel = new CategoriesModel();
 
   //
   categoriesModel.imgURL =
