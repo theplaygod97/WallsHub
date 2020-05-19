@@ -5,6 +5,7 @@
     "project_id": "wallshub-b7c30",
     "storage_bucket": "wallshub-b7c30.appspot.com"
   },
+
   "client": [
     {
       "client_info": {
