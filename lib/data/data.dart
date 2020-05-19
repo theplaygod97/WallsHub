@@ -1,5 +1,6 @@
 import 'package:walls/model/CategoriesModel.dart';
-String apiKey = "563492ad6f91700001000001cca51d34c97f49e18d5604cfd27bfdb3";
+import 'package:flutter_config/flutter_config.dart';
+String apiKey = FlutterConfig.get('API_KEY');
 List<CategoriesModel> getCategories(){
 
   List<CategoriesModel> categories = new List();
