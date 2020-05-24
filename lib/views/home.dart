@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:walls/data/data.dart';
 import 'package:walls/model/CategoriesModel.dart';
@@ -10,13 +11,14 @@ import 'package:walls/views/search.dart';
 import 'package:walls/widget/widget.dart';
 import 'package:walls/views/imageView.dart';
 import 'package:http/http.dart' as http;
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
   List<CategoriesModel> categories = new List();
   List<WallpaperModel> wallpapers = new List();
   TextEditingController searchController = new TextEditingController();
@@ -47,6 +49,7 @@ class _HomeState extends State<Home> {
     getTrendingWalls();
     categories = getCategories();
     super.initState();
+
   }
 
   @override
@@ -59,7 +62,8 @@ class _HomeState extends State<Home> {
       ),
       body:
       SingleChildScrollView(
-        child: Container(child:  Column(children: <Widget>[
+        child: Container(child:  Column(
+          children: <Widget>[
           Container(
             decoration: BoxDecoration(
               color: Color(0xfff5f8fd),
@@ -68,7 +72,8 @@ class _HomeState extends State<Home> {
             ),
             padding: EdgeInsets.symmetric(horizontal:  24),
             margin: EdgeInsets.symmetric(horizontal:  24),
-            child: Row(children: <Widget>[
+            child: Row(
+              children: <Widget>[
               Expanded(
               child : TextField(
                 controller: searchController,
@@ -110,7 +115,34 @@ class _HomeState extends State<Home> {
           ),
           wallPapersList(wallpapers: wallpapers,context: context)
         ],),),
-      )
+      ),
+        bottomNavigationBar: BottomNavyBar(
+          selectedIndex: 0,
+          showElevation: true,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          curve: Curves.easeInOutBack,
+          animationDuration: Duration(milliseconds: 200),
+          // use this to remove appBar's elevation
+          onItemSelected: (index) => setState(() {
+            if(index==1){ Navigator.push(context, MaterialPageRoute(
+                builder: (context) =>
+                    Firebaseimgs()
+            ));}
+          }),
+          items: [
+            BottomNavyBarItem(
+              icon: Icon(Icons.apps),
+              title: Text('Home'),
+              activeColor: Colors.red,
+            ),
+            BottomNavyBarItem(
+                icon: Icon(Icons.favorite),
+                title: Text("Dev's  Pick"),
+                activeColor: Colors.purpleAccent
+            ),
+          ],
+        ),
+
     );
 
   }

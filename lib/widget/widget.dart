@@ -44,7 +44,8 @@ Widget wallPapersList({List<WallpaperModel> wallpapers,context}){
               child: Container(
                child: ClipRRect(
                    borderRadius: BorderRadius.circular(16),
-                   child: Image.network(wallpaper.srcModel.portrait,fit: BoxFit.cover,))
+                   child:
+                   Image.network(wallpaper.srcModel.portrait,fit: BoxFit.cover,))
               ),
             ),
           ),
